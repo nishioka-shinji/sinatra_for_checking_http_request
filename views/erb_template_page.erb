@@ -1,0 +1,4 @@
+<% headers = request.env.select { |k, v| k.start_with?('HTTP_') } %>
+<% headers.each do |k, v| %>
+  <p><%= "#{k} -> #{v}" %></p>
+<% end %>
